@@ -5,14 +5,15 @@ import '../App.css';
 
 
 function App() {
+    const businessArr = fake.map(fak => <Card commObj={fak} />);
     return (
         <div>
-           {
-            fake.map(fak => <Card commObj={fak} />)
-           }
+           {businessArr}
         </div>
     )
 
 }
+
+
 
 export default App;

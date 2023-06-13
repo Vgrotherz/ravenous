@@ -1,0 +1,27 @@
+.businessBlock {
+    width: 340px;
+}
+
+.businessBlock h2, .businessBlock img {
+    display: flex;
+    justify-content: center;
+}
+
+/* .adrss {
+    width: 223px;
+    height: 259px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+} */
+
+.rate {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.left_right {
+    display: flex;
+    justify-content: space-between;
+}

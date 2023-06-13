@@ -1,7 +1,10 @@
 //here stores an info about fake business
+// let baseUrl = new URL("https://content.codecademy.com/programs/react/ravenous/pizza.jpg")
+
 export const fake = [
         {
         imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
+        // imageSrc: {baseUrl},
         name: 'MarginOtto Pizzeria',
         address: '1010 Paddington Way',
         city: 'Flavortown',
