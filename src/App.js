@@ -1,7 +1,7 @@
 import React from "react";
-import { fake } from "./FakeObj/FakeObj";
-import Card from "./Card/Card";
-import '../App.css';
+import { fake } from "./components/FakeObj/FakeObj";
+import Card from "./components/Card/Card"
+import './App.css';
 
 
 function App() {
