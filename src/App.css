@@ -1,8 +1,16 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
 .body {
   line-height: 1.5;
 }
 
 .flex {
   display: flex;
+}
+
+.business_container {
   justify-content: space-around;
 }
