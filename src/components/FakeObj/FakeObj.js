@@ -3,7 +3,7 @@
 
 export const fake = [
         {
-        imageSrc: 'https://content.codecademy.com/programs/react/ravenous/pizza.jpg',
+        imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
         // imageSrc: {baseUrl},
         name: 'MarginOtto Pizzeria',
         address: '1010 Paddington Way',

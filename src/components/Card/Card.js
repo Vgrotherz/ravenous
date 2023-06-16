@@ -1,7 +1,7 @@
 import React from "react";
 import Business from "../Business/Business";
 
-function Card(props) {
+const Card = (props) => {
     return (
         <div>
             <Business 

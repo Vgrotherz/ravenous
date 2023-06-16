@@ -7,6 +7,10 @@
     justify-content: center;
 }
 
+.businessBlock img {
+    width: inherit;
+}
+
 /* .adrss {
     width: 223px;
     height: 259px;
