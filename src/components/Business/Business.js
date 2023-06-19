@@ -18,7 +18,9 @@ const fake =
 const Business = () => {
     return(
         <div className='businessBlock'>
-            <img src={fake.imageSrc} alt='pic of a food' />
+            <div className='cut_img'>
+                <img src={fake.imageSrc} alt='pic of a food' />
+            </div>
             <h2>{fake.name}</h2>
             <div className='left_right'>
                 <div className='adrss'>

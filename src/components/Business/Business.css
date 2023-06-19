@@ -1,5 +1,6 @@
 .businessBlock {
     width: 340px;
+    margin: 20px;
 }
 
 .businessBlock h2, .businessBlock img {
@@ -29,4 +30,13 @@
 .left_right {
     display: flex;
     justify-content: space-between;
+}
+
+.cut_img {
+    height: 22rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
 }

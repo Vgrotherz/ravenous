@@ -11,6 +11,9 @@ const App = () => {
     // const businessArr = fake.map(fak => <Card commObj={fak} />); // это нужно только если данные идут через массив объекта при импорте 4ой и 5ой строки;
     return (
         <div className="body">
+            <div className="rav">
+                <h1>RAVENOUS</h1>
+            </div>
             <div className="header flex">
                 <SearchBar />
             </div>
@@ -21,6 +24,9 @@ const App = () => {
                 <Business />
                 <Business />
             </div>
+            {/* <div>
+                {businessArr}
+            </div> */}
         </div>
     )
 
