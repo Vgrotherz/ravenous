@@ -12,14 +12,6 @@
     width: inherit;
 }
 
-/* .adrss {
-    width: 223px;
-    height: 259px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-} */
-
 .rate {
     display: flex;
     flex-direction: column;

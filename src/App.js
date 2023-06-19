@@ -1,14 +1,27 @@
 import React from "react";
 import './App.css';
 
-// import { fake } from "./components/FakeObj/FakeObj"; // 4 и 5ый импорт нужен только если данные идут через массив объекта, а не просто через объект; 
-// import Card from "./components/Card/Card";
-import Business from "./components/Business/Business";
+import Businesses from "./components/FakeObj/FakeObj"; 
 import SearchBar from "./components/SearchBar/SearchBar";
+import BusinessList from "./components/BusinessList/BusinessList";
 
+
+// moved on FakeObj component
+// const businessObj = {
+//     imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
+//     name: 'MarginOtto Pizzeria',
+//     address: '1010 Paddington Way',
+//     city: 'Flavortown',
+//     state: 'NY',
+//     zipCode: '10101',
+//     category: 'Italian',
+//     rating: 4.5,
+//     reviewCount: 90
+// };
+
+// const businesses = [businessObj, businessObj, businessObj, businessObj, businessObj];
 
 const App = () => {
-    // const businessArr = fake.map(fak => <Card commObj={fak} />); // это нужно только если данные идут через массив объекта при импорте 4ой и 5ой строки;
     return (
         <div className="body">
             <div className="rav">
@@ -18,20 +31,10 @@ const App = () => {
                 <SearchBar />
             </div>
             <div className="flex business_container">
-                <Business />
-                <Business />
-                <Business />
-                <Business />
-                <Business />
+                <BusinessList businesses={Businesses} />
             </div>
-            {/* <div>
-                {businessArr}
-            </div> */}
         </div>
     )
-
 }
-
-
 
 export default App;
