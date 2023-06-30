@@ -10,6 +10,6 @@ const businessObj = {
     reviewCount: 90
 };
 
-const Businesses = [businessObj, businessObj, businessObj, businessObj, businessObj];
+const BusinessesArr = [businessObj, businessObj, businessObj, businessObj, businessObj];
 
-export default Businesses;
+export default BusinessesArr;

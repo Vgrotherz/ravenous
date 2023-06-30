@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 
-import Businesses from "./components/FakeObj/FakeObj"; 
+import BusinessesArr from "./components/FakeObj/FakeObj"; 
 import SearchBar from "./components/SearchBar/SearchBar";
 import BusinessList from "./components/BusinessList/BusinessList";
 
@@ -31,7 +31,7 @@ const App = () => {
                 <SearchBar />
             </div>
             <div className="flex business_container">
-                <BusinessList businesses={Businesses} />
+                <BusinessList businesses={BusinessesArr} />
             </div>
         </div>
     )
