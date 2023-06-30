@@ -13,10 +13,15 @@
     align-items: center;
 }
 
-.search_container li:hover {
+.search_head li:hover {
     cursor: pointer;
     color: rgb(185, 180, 180) ;
   }
+
+.search_head li:active {
+    cursor: pointer;
+    color: rgb(216, 200, 52) ;
+}
 
 
 .search_container {

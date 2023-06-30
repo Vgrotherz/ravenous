@@ -10,7 +10,7 @@ const sortByOptions = {
 const SearchBar = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [location, setLocation] = useState('');
-    const [sortingOption, setSortingOption] = useState('best_match');
+    const [sortingOption, setSortingOption] = useState('');
 
     const handleSearchTerm = (event) => {
       setSearchTerm(event.target.value);
@@ -24,31 +24,47 @@ const SearchBar = () => {
       setSortingOption(event.target.value);
     }
 
-    function handleSearchTest(event) {
+    function handleSearch(event) {
       event.preventDefault();
       console.log(`Searching Yelp with ${searchTerm}, ${location}, ${sortingOption}`);
     }
 
     const renderSortByOptions = () => {
         return Object.keys(sortByOptions).map((sortByOption) => {
-          let sortByOptionValue = sortByOptions[sortByOption];
+          const sortByOptionValue = sortByOptions[sortByOption];
           return <li key={sortByOptionValue}>{sortByOption}</li>;
         });
       };
       
     return (
-        <form action="//there must be url" method="get" onSubmit={handleSearchTest} className="search_container"> 
+        <div className="search_container"> 
             <div className="search_head">
-                <ul value={sortingOption} onChange={handleSortingOptionChange} >{renderSortByOptions()}</ul>
+                <ul value={sortingOption} onChange={handleSortingOptionChange}>
+                  {renderSortByOptions()}
+                </ul>
             </div>
-            <div className="search_only_container flex">
+            <form action="//there must be url" method="get" onSubmit={handleSearch} className="search_only_container flex">
               <div className="search_only">
-                  <input name="Search1" type="text" id="search1" value={searchTerm} onChange={handleSearchTerm} placeholder="Search Business"/> 
-                  <input name="Search2" type="text" id="search2" value={location} onChange={handleLocationChange} placeholder="Where?"/> 
+                  <input 
+                    name="Search1" 
+                    type="text" 
+                    id="search1" 
+                    value={searchTerm} 
+                    onChange={handleSearchTerm} 
+                    placeholder="Search Business"
+                  /> 
+                  <input 
+                    name="Search2" 
+                    type="text" 
+                    id="search2" 
+                    value={location} 
+                    onChange={handleLocationChange} 
+                    placeholder="Where?"
+                  /> 
               </div>
-              <button name="SearchSubmit"  type="search" className="search_btn">Go!</button>
-            </div> 
-        </form>);
+              <button name="SearchSubmit" type="submit" className="search_btn">Go!</button>
+            </form> 
+        </div>);
 }
 
 
