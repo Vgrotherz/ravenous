@@ -10,7 +10,7 @@ const sortByOptions = {
 const SearchBar = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [location, setLocation] = useState('');
-    const [sortingOption, setSortingOption] = useState('');
+    const [sortingOption, setSortingOption] = useState('best_match');
 
     const handleSearchTerm = (event) => {
       setSearchTerm(event.target.value);
@@ -21,7 +21,7 @@ const SearchBar = () => {
     }
 
     const handleSortingOptionChange = (event) => {
-      setSortingOption(event.target.value);
+      setSortingOption(event);
     }
 
     function handleSearch(event) {
@@ -31,8 +31,14 @@ const SearchBar = () => {
 
     const renderSortByOptions = () => {
         return Object.keys(sortByOptions).map((sortByOption) => {
-          const sortByOptionValue = sortByOptions[sortByOption];
-          return <li key={sortByOptionValue}>{sortByOption}</li>;
+          let sortByOptionValue = sortByOptions[sortByOption];
+          return <li 
+                  key={sortByOptionValue} 
+                  onClick={() => {
+                    handleSortingOptionChange(sortByOptionValue);
+                  }}>
+                    {sortByOption}
+                </li>;
         });
       };
       
