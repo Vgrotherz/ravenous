@@ -21,7 +21,6 @@ const Business = ({busnObjects}) => {
                     <p>Review Count = {busnObjects.reviewCount}</p>
                 </div>
             </div>
-
         </div>
     )
 }

@@ -1,3 +1,5 @@
+//this is a test object
+
 const businessObj = {
     imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
     name: 'MarginOtto Pizzeria',
@@ -7,7 +9,8 @@ const businessObj = {
     zipCode: '10101',
     category: 'Italian',
     rating: 4.5,
-    reviewCount: 90
+    reviewCount: 90,
+    phone: '555-666-777'
 };
 
 const BusinessesArr = [businessObj, businessObj, businessObj, businessObj, businessObj];

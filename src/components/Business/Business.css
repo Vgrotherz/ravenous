@@ -25,10 +25,16 @@
 }
 
 .cut_img {
+    background-color: black;
     height: 22rem;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+}
+
+.phone {
+    display: flex;
+    justify-content: center;
 }
