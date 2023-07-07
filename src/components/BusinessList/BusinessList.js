@@ -19,7 +19,7 @@ const BusinessList = () => {
 
   useEffect(() => {
     // Call the getBusinessListings function when the component mounts
-    getBusinessListings('restaurants', 'New York', 'rating')
+    getBusinessListings('pizza', 'New York', 'review_count')
       .then(businesses => {
         setBusinesses(businesses);
       })

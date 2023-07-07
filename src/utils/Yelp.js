@@ -27,7 +27,8 @@ const getBusinessListings = async(searchTerm, location, sortingOption) => {
           city: business.location.city,
           state: business.location.state,
           zipCode: business.location.zip_code,
-          phone: business.phone
+          phone: business.phone,
+          reviewCount: business.review_count
         };
       });
   

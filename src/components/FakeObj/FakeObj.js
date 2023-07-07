@@ -1,5 +1,3 @@
-//this is a test object
-
 const businessObj = {
     imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
     name: 'MarginOtto Pizzeria',
