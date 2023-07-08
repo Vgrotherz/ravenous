@@ -1,16 +1,16 @@
-const businessObj = {
-    imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
-    name: 'MarginOtto Pizzeria',
-    address: '1010 Paddington Way',
-    city: 'Flavortown',
-    state: 'NY',
-    zipCode: '10101',
-    category: 'Italian',
-    rating: 4.5,
-    reviewCount: 90,
-    phone: '555-666-777'
-};
+// const businessObj = {
+//     imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
+//     name: 'MarginOtto Pizzeria',
+//     address: '1010 Paddington Way',
+//     city: 'Flavortown',
+//     state: 'NY',
+//     zipCode: '10101',
+//     category: 'Italian',
+//     rating: 4.5,
+//     reviewCount: 90,
+//     phone: '555-666-777'
+// };
 
-const BusinessesArr = [businessObj, businessObj, businessObj, businessObj, businessObj];
+// const BusinessesArr = [businessObj, businessObj, businessObj, businessObj, businessObj];
 
-export default BusinessesArr;
+// export default BusinessesArr;
