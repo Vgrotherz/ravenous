@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import './SearchBar.css';
 
 const sortByOptions = {
@@ -7,27 +7,27 @@ const sortByOptions = {
     "Most Reviewed": "review_count",
   };
   
-const SearchBar = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [location, setLocation] = useState('');
-    const [sortingOption, setSortingOption] = useState('best_match');
+const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, onLocationChange, onSortingOptionChange, onSearch }) => {
+    // const [searchTerm, setSearchTerm] = useState('');
+    // const [location, setLocation] = useState('');
+    // const [sortingOption, setSortingOption] = useState('best_match');
 
     const handleSearchTerm = (event) => {
-      setSearchTerm(event.target.value);
+      onSearchTermChange(event.target.value);
     }
 
     const handleLocationChange = (event) => {
-      setLocation(event.target.value);
+      onLocationChange(event.target.value);
     }
 
     const handleSortingOptionChange = (event) => {
-      setSortingOption(event);
+      onSortingOptionChange(event);
     }
 
-    function handleSearch(event) {
-      event.preventDefault();
-      //console.log(`Searching Yelp with ${searchTerm}, ${location}, ${sortingOption}`);
-    }
+    // function handleSearch(event) {
+    //   event.preventDefault();
+    //   //console.log(`Searching Yelp with ${searchTerm}, ${location}, ${sortingOption}`);
+    // }
 
     const renderSortByOptions = () => {
         return Object.keys(sortByOptions).map((sortByOption) => {
@@ -49,7 +49,7 @@ const SearchBar = () => {
                   {renderSortByOptions()}
                 </ul>
             </div>
-            <form action="//there must be url" method="get" onSubmit={handleSearch} className="search_only_container flex">
+            <form action="https://api.yelp.com/v3/businesses/search" method="get" onSubmit={onSearch} className="search_only_container flex">
               <div className="search_only">
                   <input 
                     name="Search1" 
