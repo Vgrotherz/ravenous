@@ -49,7 +49,7 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                   {renderSortByOptions()}
                 </ul>
             </div>
-            <form action="https://api.yelp.com/v3/businesses/search" method="get" onSubmit={onSearch} className="search_only_container flex">
+            <form action="//there must be url" method="get" onSubmit={onSearch} className="search_only_container flex">
               <div className="search_only">
                   <input 
                     name="Search1" 

@@ -4,7 +4,7 @@ import Business from "../Business/Business";
 
 const BusinessList = ({businesses}) => {
     const businessArr = businesses.map((busObj) => (
-    <Business key={busObj.name} busnObjects={busObj} />
+    <Business key={busObj.id} busnObjects={busObj} />
     ));    
 
     return (
