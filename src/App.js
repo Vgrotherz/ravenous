@@ -4,6 +4,7 @@ import './App.css';
 import SearchBar from "./components/SearchBar/SearchBar";
 import BusinessList from "./components/BusinessList/BusinessList";
 import getBusinessListings from "./utils/Yelp";
+import Cors from "./components/Cors/Cors";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,6 +30,7 @@ const App = () => {
                 <h1>RAVENOUS</h1>
             </div>
             <div className="header flex">
+                <Cors />
                 <SearchBar 
                   searchTerm={searchTerm}
                   location={location}
