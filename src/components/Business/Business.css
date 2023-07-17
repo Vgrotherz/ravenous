@@ -1,6 +1,9 @@
 .businessBlock {
     width: 340px;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .businessBlock h2, .businessBlock img {

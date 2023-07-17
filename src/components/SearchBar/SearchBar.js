@@ -8,9 +8,6 @@ const sortByOptions = {
   };
   
 const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, onLocationChange, onSortingOptionChange, onSearch }) => {
-    // const [searchTerm, setSearchTerm] = useState('');
-    // const [location, setLocation] = useState('');
-    // const [sortingOption, setSortingOption] = useState('best_match');
 
     const handleSearchTerm = (event) => {
       onSearchTermChange(event.target.value);
@@ -23,11 +20,6 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
     const handleSortingOptionChange = (event) => {
       onSortingOptionChange(event);
     }
-
-    // function handleSearch(event) {
-    //   event.preventDefault();
-    //   //console.log(`Searching Yelp with ${searchTerm}, ${location}, ${sortingOption}`);
-    // }
 
     const renderSortByOptions = () => {
         return Object.keys(sortByOptions).map((sortByOption) => {
@@ -49,7 +41,7 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                   {renderSortByOptions()}
                 </ul>
             </div>
-            <form action="//there must be url" method="get" onSubmit={onSearch} className="search_only_container flex">
+            <form method="get" onSubmit={onSearch} className="search_only_container flex">
               <div className="search_only">
                   <input 
                     name="Search1" 

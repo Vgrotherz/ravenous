@@ -33,3 +33,9 @@
   flex-wrap: wrap;
   margin: 30px;
 }
+
+@media only screen and (max-width: 680px) { 
+  .header { 
+    background-image: url(/src/components/SearchBar/background_search_mobile.jpg); 
+  } 
+}
