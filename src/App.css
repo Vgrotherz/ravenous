@@ -19,9 +19,10 @@
   background-image: url(./components/SearchBar/background_search_desktop.jpg);
   background-size: cover;
   height: 25rem;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   margin-bottom: 30px;
+  flex-direction: column;
 }
 
 .flex {
