@@ -39,7 +39,5 @@ const getBusinessListings = async(searchTerm, location, sortingOption) => {
     }
   }
   
-  //console.log(getBusinessListings())
-  // Export the function
   export default getBusinessListings;
 
