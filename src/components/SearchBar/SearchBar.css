@@ -39,13 +39,11 @@
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    width: 60rem; 
 } 
  
 .search_only_container{ 
     flex-direction: column; 
-    align-items: center; 
-    width: 67rem; 
+    align-items: center;  
 } 
  
 .search_only { 
