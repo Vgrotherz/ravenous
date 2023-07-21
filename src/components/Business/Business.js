@@ -3,7 +3,7 @@ import './Business.css';
 
 const Business = ({busnObjects}) => {
     return(
-        <div className='businessBlock'>
+        <div className='businessBlock tv'>
             <div className='cut_img'>
                 <img src={busnObjects.imageSrc} alt='pic of a food' />
             </div>
@@ -17,7 +17,7 @@ const Business = ({busnObjects}) => {
                 </div>
                 <div className='rate'>
                     <p>{busnObjects.category}</p>
-                    <p>rating = {busnObjects.rating}</p>
+                    <p>Rating = {busnObjects.rating} </p>
                     <p>Review Count = {busnObjects.reviewCount}</p>
                 </div>
             </div>

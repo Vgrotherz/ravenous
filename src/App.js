@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './App.css';
+import './Reset.css';
 
 import SearchBar from "./components/SearchBar/SearchBar";
 import BusinessList from "./components/BusinessList/BusinessList";
