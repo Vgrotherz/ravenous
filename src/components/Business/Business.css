@@ -15,6 +15,8 @@
 .businessBlock h2 {
     align-items: center;
     height: 4rem;
+    border-bottom: double #b3acac;
+    margin-bottom: 19px;
 }
 
 .businessBlock img {
@@ -33,6 +35,11 @@
     justify-content: space-between;
 }
 
+.adrss {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
 .cut_img {
     background-color: black;
     height: 22rem;
@@ -45,13 +52,23 @@
 
 .rating {
     color: #a7884c;
+}
+
+.rating, .review{
     font-family: 'Raleway',sans-serif;
     font-size: 18px;
     font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
-.review {
+.rating span {
+    font-size: 25px;
+}
 
+.review span {
+    color: rgb(27, 27, 160);
+    font-size: 20px;
 }
 
 .tv {
@@ -70,4 +87,12 @@
         border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
         box-shadow: 14px 14px rgba(0,0,0,.15);
     }
+
+    /* .businessBlock {
+        width: 200px;
+    }
+
+    .cut_img {
+        height: 15rem;
+    } */
   }
