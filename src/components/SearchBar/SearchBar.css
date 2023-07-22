@@ -56,6 +56,7 @@
     border: 0; 
     width: 25rem; 
     padding: 14px; 
+    margin: 0 15px;
 } 
  
 .search_btn { 
@@ -96,12 +97,8 @@
  
 @media only screen and (max-width: 680px) { 
     .search_only { 
-        flex-direction: column; 
-        align-items: center; 
-        align-items: center; 
-        width: 47rem; 
-        align-items: center;  
-        width: 47rem; 
+        flex-direction: column;  
+        align-items: center;   
     } 
  
     .search_only input {         
@@ -133,10 +130,12 @@
 
     .search_head li:hover {
         cursor: pointer; 
-        background-color: #a7874b;
         color: aqua;
     }
 
-
+    .search_btn:hover { 
+        cursor: pointer; 
+        background-color: #cca353; 
+    } 
      
 }
