@@ -88,11 +88,22 @@
         box-shadow: 14px 14px rgba(0,0,0,.15);
     }
 
-    /* .businessBlock {
-        width: 200px;
-    }
+    @media only screen and (max-width:430px) {
+        .cut_img {
+            max-height: 15rem;
+        }
+    
+        .businessBlock {
+            max-width: 230px;
+            font-size: 4vw;
+        }
 
-    .cut_img {
-        height: 15rem;
-    } */
+        .rate {
+            font-size: 5vw;
+        }
+
+        .rating, .review {
+            font-size: inherit;
+        }
+    }
   }

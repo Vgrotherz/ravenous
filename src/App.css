@@ -43,4 +43,8 @@ h1 {
   .header { 
     background-image: url(/src/components/SearchBar/background_search_mobile.jpg); 
   } 
+
+  .rav h1 {
+    font-size: 40px; 
+  }
 }
