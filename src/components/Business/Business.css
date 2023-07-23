@@ -63,12 +63,11 @@
 }
 
 .rating span {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .review span {
     color: rgb(27, 27, 160);
-    font-size: 20px;
 }
 
 .tv {
@@ -106,8 +105,14 @@
             font-size: inherit;
         }
 
+        .rating_numb {
+            font-size: 1.2rem;
+        }
+
         .review {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
     }
   }

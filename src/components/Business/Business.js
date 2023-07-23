@@ -18,8 +18,8 @@ const Business = ({busnObjects}) => {
                 <div className='rate'>
                     <p>{busnObjects.category}</p>
                     <p className='rating'>Rating</p>
-                    <p className='rating'>{busnObjects.rating} <span>&#10030;</span></p>
-                    <p className='review'>{busnObjects.reviewCount} <span>&#10000;</span> reviews</p>
+                    <p className='rating rating_numb'>{busnObjects.rating} <span>&#10030;</span></p>
+                    <p className='review'>{busnObjects.reviewCount} reviews<span>&#10000;</span></p>
                 </div>
             </div>
         </div>
