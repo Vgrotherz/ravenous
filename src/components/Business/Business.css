@@ -105,5 +105,9 @@
         .rating, .review {
             font-size: inherit;
         }
+
+        .review {
+            display: flex;
+        }
     }
   }
