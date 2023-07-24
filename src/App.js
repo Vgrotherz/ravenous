@@ -24,6 +24,10 @@ const App = () => {
       });
   };
 
+  const handleClear = (event) => {
+    setBusinesses([]);
+  };
+
 
     return (
         <div className="body">
@@ -40,6 +44,7 @@ const App = () => {
                   onLocationChange={setLocation}
                   onSortingOptionChange={setSortingOption}
                   onSearch={handleSearch}
+                  onClear={handleClear}
                   />
             </div>
             <div className="flex business_container">

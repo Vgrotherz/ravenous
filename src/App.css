@@ -24,7 +24,6 @@ h1 {
 .header {
   background-image: url(./components/SearchBar/background_search_desktop.jpg);
   background-size: cover;
-  height: 25rem;
   align-items: center;
   flex-direction: column;
 }

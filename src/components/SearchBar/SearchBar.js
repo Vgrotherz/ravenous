@@ -7,7 +7,7 @@ const sortByOptions = {
     "Most Reviewed": "review_count", 
   }; 
    
-const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, onLocationChange, onSortingOptionChange, onSearch }) => {  
+const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, onLocationChange, onSortingOptionChange, onSearch, onClear }) => {  
     const [selectedOption, setSelectedOption] = useState(sortingOption); 
  
     const handleSearchTerm = (event) => { 
@@ -27,6 +27,7 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
     const renderSortByOptions = () => { 
         return Object.keys(sortByOptions).map((sortByOption) => { 
           let sortByOptionValue = sortByOptions[sortByOption]; 
+          // isSelected func for css color
           const isSelected = sortByOptionValue === selectedOption; 
           return <li  
           key={sortByOptionValue} 
@@ -53,7 +54,8 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                     id="search1"  
                     value={searchTerm}  
                     onChange={handleSearchTerm}  
-                    placeholder="Search Business/ example - Pizza/Taco/Chinese" 
+                    placeholder="Search Business/example - Pizza/Taco/Chinese"
+                    required 
                   />  
                   <input  
                     name="Search2"  
@@ -61,11 +63,13 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                     id="search2"  
                     value={location}  
                     onChange={handleLocationChange}  
-                    placeholder="In which US State?" 
+                    placeholder="In which US State?"
+                    required
                   />  
               </div> 
-              <button name="SearchSubmit" type="submit" className="search_btn">Search!</button> 
-            </form>  
+              <button name="SearchSubmit" type="submit" className="search_btn">Search!</button>   
+            </form>
+            <button name="ClearBtn" className="search_btn" onClick={onClear}>Clear results</button>
         </div>); 
 } 
  
