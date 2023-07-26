@@ -1,3 +1,8 @@
+.businessBlock a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .businessBlock {
     width: 340px;
     margin: 0 10px 20px 10px;

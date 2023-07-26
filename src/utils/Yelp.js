@@ -27,8 +27,10 @@ const getBusinessListings = async(searchTerm, location, sortingOption) => {
           city: business.location.city,
           state: business.location.state,
           zipCode: business.location.zip_code,
-          phone: business.phone,
-          reviewCount: business.review_count
+          // gets a phone number from a yelp
+          // phone: business.phone,
+          reviewCount: business.review_count,
+          url: business.url
         };
       });
   

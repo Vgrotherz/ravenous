@@ -38,7 +38,12 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                 </li>; 
         }); 
       }; 
-       
+      
+      // const check_input = (event) => {
+      //   let key = event.keyCode;
+      //   return ((key >= 65 && key <= 90) || (key >= 97 && key <= 122) || key == 8);
+      // };
+
     return ( 
         <div className="search_container">  
             <div className="search_head"> 
@@ -63,7 +68,7 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                     id="search2"  
                     value={location}  
                     onChange={handleLocationChange}  
-                    placeholder="In which US State?"
+                    placeholder="Where"
                     required
                   />  
               </div> 
