@@ -9,14 +9,19 @@ const sortByOptions = {
    
 const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, onLocationChange, onSortingOptionChange, onSearch, onClear }) => {  
     const [selectedOption, setSelectedOption] = useState(sortingOption); 
-    const [inputValue, setInputValue] = useState('');
  
-    const handleSearchTerm = (event) => { 
-      onSearchTermChange(event.target.value); 
+
+    //lettersOnly allow user only letters input
+    const handleSearchTerm = (event) => {
+      const lettersOnly = event.target.value.replace(/[^a-zA-Z]/g, ""); 
+      onSearchTermChange(lettersOnly); 
     } 
  
-    const handleLocationChange = (event) => { 
-      onLocationChange(event.target.value); 
+
+    //lettersOnly allow user only letters input
+    const handleLocationChange = (event) => {
+      const lettersOnly = event.target.value.replace(/[^a-zA-Z]/g, "");  
+      onLocationChange(lettersOnly); 
     } 
  
     const handleSortingOptionChange = (event) => { 
@@ -24,14 +29,6 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
       setSelectedOption(selectedValue); 
       onSortingOptionChange(selectedValue); 
     } 
-
-
-    //allow user to input only letters
-    const handleInputChange = (event) => {
-      const { value } = event.target;
-      const lettersOnly = value.replace(/[^a-zA-Z]/g, '');
-      setInputValue(lettersOnly);
-    };
  
     const renderSortByOptions = () => { 
         return Object.keys(sortByOptions).map((sortByOption) => { 
@@ -61,8 +58,8 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                     name="Search1"  
                     type="text"  
                     id="search1"  
-                    value={searchTerm, inputValue}  
-                    onChange={handleSearchTerm, handleInputChange}  
+                    value={searchTerm}  
+                    onChange={handleSearchTerm}  
                     placeholder="Search Business/example - Pizza/Taco/Chinese"
                     required 
                   />  
