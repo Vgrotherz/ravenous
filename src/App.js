@@ -24,7 +24,7 @@ const App = () => {
       });
   };
 
-  const handleClear = (event) => {
+  const handleClear = () => {
     setBusinesses([]);
   };
 

@@ -9,7 +9,9 @@ const Cors = () => {
     return ( 
         <div> 
             <button className="corsBtn" onClick={handleButtonClick}> 
-                Click me first! 
+                Click me first!
+                <br></br>
+                Yes! it is necessary! 
             </button> 
       </div> 
     ); 

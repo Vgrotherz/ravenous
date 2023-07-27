@@ -9,6 +9,7 @@ const sortByOptions = {
    
 const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, onLocationChange, onSortingOptionChange, onSearch, onClear }) => {  
     const [selectedOption, setSelectedOption] = useState(sortingOption); 
+    const [inputValue, setInputValue] = useState('');
  
     const handleSearchTerm = (event) => { 
       onSearchTermChange(event.target.value); 
@@ -23,11 +24,19 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
       setSelectedOption(selectedValue); 
       onSortingOptionChange(selectedValue); 
     } 
+
+
+    //allow user to input only letters
+    const handleInputChange = (event) => {
+      const { value } = event.target;
+      const lettersOnly = value.replace(/[^a-zA-Z]/g, '');
+      setInputValue(lettersOnly);
+    };
  
     const renderSortByOptions = () => { 
         return Object.keys(sortByOptions).map((sortByOption) => { 
           let sortByOptionValue = sortByOptions[sortByOption]; 
-          // isSelected func for css color
+          // isSelected func for css color in <ul> option 
           const isSelected = sortByOptionValue === selectedOption; 
           return <li  
           key={sortByOptionValue} 
@@ -38,11 +47,6 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                 </li>; 
         }); 
       }; 
-      
-      // const check_input = (event) => {
-      //   let key = event.keyCode;
-      //   return ((key >= 65 && key <= 90) || (key >= 97 && key <= 122) || key == 8);
-      // };
 
     return ( 
         <div className="search_container">  
@@ -57,8 +61,8 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                     name="Search1"  
                     type="text"  
                     id="search1"  
-                    value={searchTerm}  
-                    onChange={handleSearchTerm}  
+                    value={searchTerm, inputValue}  
+                    onChange={handleSearchTerm, handleInputChange}  
                     placeholder="Search Business/example - Pizza/Taco/Chinese"
                     required 
                   />  
@@ -66,9 +70,9 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                     name="Search2"  
                     type="text"  
                     id="search2"  
-                    value={location}  
-                    onChange={handleLocationChange}  
-                    placeholder="Where"
+                    value={location} 
+                    onChange={handleLocationChange} 
+                    placeholder="Where?"
                     required
                   />  
               </div> 
