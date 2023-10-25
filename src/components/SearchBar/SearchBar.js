@@ -47,12 +47,12 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
 
     return ( 
         <div className="search_container">  
-            <div className="search_head"> 
+            <div className="search_head desktop"> 
                 <ul value={sortingOption} onChange={handleSortingOptionChange}> 
                   {renderSortByOptions()} 
                 </ul> 
             </div> 
-            <form  onSubmit={onSearch} className="search_only_container flex"> 
+            <form id='searchForm' onSubmit={onSearch} className="search_only_container flex"> 
               <div className="search_only"> 
                   <input  
                     name="Search1"  
@@ -60,7 +60,7 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                     id="search1"  
                     value={searchTerm}  
                     onChange={handleSearchTerm}  
-                    placeholder="Search Business/example - Pizza/Taco/Chinese"
+                    placeholder="Search Business. ex - Pizza/Taco/Chinese"
                     required 
                   />  
                   <input  
@@ -69,13 +69,21 @@ const SearchBar = ({ searchTerm, location, sortingOption, onSearchTermChange, on
                     id="search2"  
                     value={location} 
                     onChange={handleLocationChange} 
-                    placeholder="Where?"
+                    placeholder="Where? EU or USA cities"
                     required
                   />  
-              </div> 
-              <button name="SearchSubmit" type="submit" className="search_btn">Search!</button>   
+              </div>  
+              {/* <button name="SearchSubmit" type="submit" className="search_btn">Search!</button>    */}
             </form>
-            <button name="ClearBtn" className="search_btn" onClick={onClear}>Clear results</button>
+            <div className="search_head search_head_mob mobile"> 
+                <ul value={sortingOption} onChange={handleSortingOptionChange}> 
+                  {renderSortByOptions()} 
+                </ul> 
+            </div>
+            <div className="btn_container">
+              <button name="SearchSubmit" type="submit" form="searchForm" className="search_btn">Search!</button>  
+              <button name="ClearBtn" className="search_btn clear_btn" onClick={onClear}>Clear results</button>
+            </div>
         </div>); 
 } 
  

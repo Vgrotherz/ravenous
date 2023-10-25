@@ -1,5 +1,5 @@
 const apiUrl = 'https://api.yelp.com/v3/businesses/search';
-const apiKey = 'wLwER5wQE18IalIBrsrFMM0-QXtb7FcU2hSBggf4E0eGF7UC8VlCMKovl5PxuLtTwo8AFzr-CBWn_9rttvX0IZtgcBWzaEZeCkFRkHDOF8T52WKjhAiIomvINeCkZHYx';
+const apiKey = ''; // insert apikey here
 
 
 const getBusinessListings = async(searchTerm, location, sortingOption) => {
